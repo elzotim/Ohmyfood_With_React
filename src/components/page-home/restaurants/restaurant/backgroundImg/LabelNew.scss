@@ -1,0 +1,18 @@
+@import "../../../../../styles/settings";
+
+.restaurant {
+  &__card {
+    &-new {
+      @include flexbox-center;
+      position: absolute;
+      background: #99e2d0;
+      top: 20px;
+      right: 20px;
+      & p {
+        color: #1b6150;
+        padding: 10px 20px;
+        margin: 0;
+      }
+    }
+  }
+}

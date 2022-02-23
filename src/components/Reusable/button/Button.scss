@@ -1,0 +1,26 @@
+@import "../../../styles/settings";
+
+.hero {
+  &__button {
+    @include button-style;
+    &:hover {
+      @include button-hover;
+    }
+  }
+}
+
+.menu {
+  &__contain-button {
+    @include flexbox-center;
+    width: 100%;
+  }
+  &__button {
+    @include button-style;
+    padding: 10px 20px;
+    margin: 50px 0;
+    font-size: 18px;
+    &:hover {
+      @include button-hover;
+    }
+  }
+}

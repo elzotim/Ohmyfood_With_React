@@ -1,0 +1,13 @@
+@import "../../../../../styles/settings";
+
+.restaurant {
+  &__block {
+    &-info {
+      color: black;
+      margin-left: 20px;
+      & > :first-child {
+        font-weight: 700;
+      }
+    }
+  }
+}

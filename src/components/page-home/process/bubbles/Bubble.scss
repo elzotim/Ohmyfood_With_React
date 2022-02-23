@@ -1,0 +1,31 @@
+@import "../../../../styles/settings";
+
+.process {
+  &__step {
+    display: flex;
+    align-items: center;
+    background: #f6f6f6;
+    height: auto;
+    width: auto;
+    margin: 10px 20px;
+    border-radius: 20px;
+    position: relative;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.16);
+    &:hover {
+      @include button-hover;
+      background: lighten(#f7f7f7, 3%);
+    }
+  }
+  &__number {
+    background-color: $color-primary;
+    color: white;
+    position: absolute;
+    padding: 3px 8px 3px 8px;
+    border-radius: 500px;
+    transform: translateX(-50%);
+  }
+  &__icon {
+    color: #7e7e7e;
+    margin: 0 20px;
+  }
+}

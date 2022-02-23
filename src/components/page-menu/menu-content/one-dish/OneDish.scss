@@ -1,0 +1,140 @@
+@import "../../../../styles/settings";
+
+.menu {
+  &__grid {
+    &__case {
+      position: relative;
+      cursor: pointer;
+      overflow: hidden;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      height: 70px;
+      border-radius: 15px;
+      background-color: white;
+      box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.1);
+      &:hover .validation__box {
+        @include flexbox-center;
+        animation: slide-left 0.5s ease;
+        transform-origin: right;
+      }
+      &:hover .menu__case__price {
+        padding-right: 70px;
+        transition: 0.5s ease;
+      }
+      .validation__box {
+        display: none;
+        position: absolute;
+        background: $color-tertiary;
+        border-radius: 0 15px 15px 0;
+        right: 0px;
+        padding: 0 13px;
+        height: 100%;
+        i {
+          font-size: 30px;
+          color: white;
+          transform: rotate(180deg);
+          animation: rotate 0.5s both;
+        }
+      }
+    }
+  }
+  &__case {
+    &__dish {
+      margin-left: 20px;
+      white-space: nowrap;
+      overflow: hidden;
+      & p {
+        margin: 0;
+        text-overflow: ellipsis;
+        overflow: hidden;
+      }
+
+      &-title {
+        font-weight: bold;
+      }
+    }
+    &__price {
+      padding-right: 20px;
+      font-weight: bold;
+      padding-left: 7px;
+      width: 40px;
+    }
+  }
+}
+
+.dish-and-price {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes slide-left {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(-50px);
+  }
+}
+
+.appears-with-opacity {
+  animation: opacity 1s both;
+}
+
+#case-1 {
+  animation-delay: 0.1s;
+}
+
+#case-2 {
+  animation-delay: 0.2s;
+}
+
+#case-3 {
+  animation-delay: 0.3s;
+}
+
+#case-4 {
+  animation-delay: 0.4s;
+}
+
+#case-5 {
+  animation-delay: 0.5s;
+}
+
+#case-6 {
+  animation-delay: 0.6s;
+}
+
+#case-7 {
+  animation-delay: 0.7s;
+}
+
+#case-8 {
+  animation-delay: 0.8s;
+}
+
+#case-9 {
+  animation-delay: 0.9s;
+}
+
+// Responsive
+
+@media screen and (min-width: 1100px) {
+  .menu__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+  }
+}

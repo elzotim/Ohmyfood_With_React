@@ -1,0 +1,13 @@
+@import "../../../styles/settings";
+
+.hero {
+    background: #fafafa;
+    width: 100%;
+    &__container {
+        width: 100%;
+        padding: 20px;
+        @include flexbox-center();
+        flex-direction: column;
+        padding: 50px 0;
+    }
+}

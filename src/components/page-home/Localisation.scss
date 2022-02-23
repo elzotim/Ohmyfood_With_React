@@ -1,0 +1,12 @@
+@import "../../styles/settings";
+
+.location {
+    @include flexbox-center();
+    background: #f3f3f3;
+    color: #7a7a7a;
+
+    &__city {
+        margin-left: 13px;
+        font-weight: 400;
+    }
+}   

@@ -1,0 +1,37 @@
+@import "../../styles/settings";
+
+.menu {
+  margin-top: -200px;
+  padding: 0 20px;
+  width: 100%;
+  max-width: 1230px;
+  border-radius: 30px 30px 0 0;
+  background-color: #f6f6f6;
+  &__contain-button {
+    @include flexbox-center;
+    width: 100%;
+  }
+  &__button {
+    @include button-style;
+    padding: 10px 20px;
+    margin: 50px 0;
+    font-size: 18px;
+    &:hover {
+      @include button-hover;
+    }
+  }
+}
+
+#menu {
+  background: white;
+  width: 100%;
+  @include flexbox-center;
+}
+
+// Responsive
+
+@media screen and (min-width: 1100px) {
+  .menu {
+    margin-top: -60px;
+  }
+}

@@ -1,0 +1,29 @@
+@import "../../../../styles/settings";
+
+.menu {
+  &__grid {
+    display: grid;
+    grid-gap: 40px;
+    &__bloc {
+      display: grid;
+      grid-gap: 15px;
+    }
+    &__title {
+      & h3 {
+        position: relative;
+        font-weight: 400;
+        text-transform: uppercase;
+        &::after {
+          content: "";
+          width: 50px;
+          height: 4px;
+          background: #99e2d0;
+          position: absolute;
+          z-index: 20;
+          left: 0px;
+          bottom: -8px;
+        }
+      }
+    }
+  }
+}

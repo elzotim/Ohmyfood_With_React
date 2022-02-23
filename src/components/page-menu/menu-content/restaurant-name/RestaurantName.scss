@@ -1,0 +1,34 @@
+@import "../../../../styles/settings";
+
+.menu {
+  &__header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    &__title {
+      font-family: "Shrikhand", cursive;
+    }
+    &__heart {
+      .heart {
+        width: 30px;
+        stroke-width: 30;
+        stroke: black;
+        fill: white;
+        cursor: pointer;
+      }
+      .heart-full {
+        position: absolute;
+        fill: url(#text-fill);
+        stroke: none;
+      }
+      .heart-empty {
+        position: relative;
+        &:hover {
+          opacity: 0;
+          transition: 0.5s;
+        }
+      }
+    }
+  }
+}

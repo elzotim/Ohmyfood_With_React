@@ -1,0 +1,33 @@
+@import "../../styles/settings.scss";
+
+.footer {
+  width: 100%;
+  background-color: #353535;
+  @include flexbox-center;
+  &__bloc {
+    display: inline;
+    padding: 0 40px;
+    width: 100%;
+    max-width: 1200px;
+    & .logo {
+      font-family: "Shrikhand", cursive;
+      color: white;
+      font-size: 20px;
+      padding: 15px 0;
+    }
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .footer {
+    &__bloc {
+      margin-bottom: 15px;
+      &-links {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        max-width: 900px;
+      }
+    }
+  }
+}
